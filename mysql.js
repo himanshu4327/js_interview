@@ -1,4 +1,6 @@
-    const [checkDevice] = await conn.execute('SELECT * FROM ' + table + ' WHERE FIND_IN_SET(serial_key, ?)  AND device_type = 7', [_serial_key])
+use of find and set :
+const [customName] = await conn.execute(`SELECT * FROM ${table} WHERE FIND_IN_SET(key, ?)`, [_key]);
+
 CREATE TABLE table_name (
     column1_name data_type,
     column2_name data_type,
